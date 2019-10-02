@@ -11,13 +11,7 @@
 <hr>
 <h2>Comments</h2>
 <ul>
-  <% @article.comments.each do |comment| %>
-    <li>
-      <%= comment.body %><br>
-      <em><%= comment.commenter %></em>
-    </li>
-
-  <% end %>
+  <%= render @article.comments %>
 </ul>
 
 
