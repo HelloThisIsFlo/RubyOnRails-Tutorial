@@ -1,4 +1,7 @@
 <li>
-  <%= comment.body %><br>
-  <em><%= comment.commenter %></em>
+  <%= comment.body %> - <em><%= comment.commenter %></em>
+  <br>
+  <%= link_to 'Destroy Comment', [comment.article, comment],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
 </li>
